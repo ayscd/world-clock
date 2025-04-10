@@ -1,0 +1,83 @@
+body {
+    background-color: #fffbfeff;
+    font-family: "Roboto", sans-serif;
+}
+
+hr {
+    color: rgba(114, 110, 96, 0.5);
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 80px ;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    color: #442b48ff;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.app-wrapper {
+    display: block;
+    margin: 0 auto;
+    margin-top: 90px;
+    padding: 30px;
+    max-width: 400px;
+    background-color: rgba(219, 255, 118, 0.1);
+    border-radius: 30px;
+    border-width: 2px;
+    border-style: double;
+    border-color: #442b48ff;
+    box-shadow: 10px 10px 20px rgb(181, 181, 181);
+}
+
+.choose-city {
+    display: block;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    color: #726e60ff;
+    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 300px;
+    border-width: 1px;
+    border-color: #726e60ff;
+    border-radius: 5px;
+}
+
+.date, .time {
+    margin-left: 20px;
+    text-align: left;
+    color: rgba(114, 110, 96, 1);
+}
+
+.footer-wrapper {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.git-profile, .git-project, .host-link {
+    color: #726e60ff;
+}
+
+.git-profile:hover, .git-project:hover, .host-link:hover {
+     color: #98b06fff;
+}
+
+.git-profile:visited, .git-project:visited, .host-link:visited {
+       color: #98b06fff;
+}
+
+.git-profile:active, .git-project:active, .host-link:active {
+       color: #dbff76ff;
+}
