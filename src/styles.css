@@ -7,19 +7,28 @@ hr {
     color: rgba(114, 110, 96, 0.5);
 }
 
+h1, h2 {
+    font-family: "Merriweather", serif;
+}
+
 h1 {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 80px ;
+    font-size: 40px ;
     text-align: center;
+    color: rgb(75, 72, 64);
 }
 
 h2 {
-    font-family: "Merriweather", serif;
-    color: #442b48ff;
+    color: rgba(75, 72, 64, 0.8);
     margin-top: 30px;
     margin-bottom: 5px;
     margin-left: 20px;
+    font-size: 30px;
+}
+
+main {
+    margin-top: 10px;
 }
 
 footer {
@@ -31,33 +40,48 @@ footer {
     margin: 0 auto;
     margin-top: 90px;
     padding: 30px;
-    max-width: 400px;
+    max-width: 600px;
     background-color: rgba(219, 255, 118, 0.1);
-    border-radius: 30px;
-    border-width: 2px;
-    border-style: double;
-    border-color: #442b48ff;
-    box-shadow: 10px 10px 20px rgb(181, 181, 181);
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 30px 30px 30px rgba(181, 181, 181, 0.5);
 }
 
 .choose-city {
     display: block;
     margin: 0 auto;
     font-family: "Roboto", sans-serif;
+    font-size: 14px;
     color: #726e60ff;
     padding: 5px;
     margin-top: 0;
     margin-bottom: 30px;
-    width: 300px;
+    width: 550px;
     border-width: 1px;
     border-color: #726e60ff;
     border-radius: 5px;
 }
 
-.date, .time {
+.block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
     margin-left: 20px;
+    font-size: 18px;
     text-align: left;
     color: rgba(114, 110, 96, 1);
+    margin-top: 5px;
+}
+
+.time {
+    color: rgba(75, 72, 64, 0.8);
+    text-align: right;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-right: 20px; 
 }
 
 .footer-wrapper {
