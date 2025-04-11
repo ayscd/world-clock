@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-    color: rgba(75, 72, 64, 0.8);
+    color: rgba(75, 72, 64, 0.9);
     margin-top: 30px;
     margin-bottom: 5px;
     margin-left: 20px;
@@ -62,7 +62,7 @@ footer {
     border-radius: 5px;
 }
 
-.block {
+.city {
     display: flex;
     justify-content: space-between;
 }
@@ -76,12 +76,18 @@ footer {
 }
 
 .time {
-    color: rgba(75, 72, 64, 0.8);
+    color: rgba(75, 72, 64, 0.9);
     text-align: right;
     font-size: 40px;
     font-weight: 600;
     margin-top: 35px;
     margin-right: 20px; 
+}
+
+.time small {
+    font-size: 20px;
+    vertical-align: middle;
+    line-height: 40px;
 }
 
 .footer-wrapper {

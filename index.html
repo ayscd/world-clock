@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!--IMPORTING MOMENT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+
+    <!--IMPORING MOMENT TIMEZONES-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" type="text/css">
     
     <title>WORLD CLOCK 🕰️</title>
@@ -30,22 +36,23 @@
 
         <main>
 
-            <div class="block">
-                <div class="city">
-                    <h2>Rio de Janeiro</h2>
-                    <p class="date"> 10 de Abril de 2025</p>
-                </div>
-                <div class="time">19:11:15</div>
+            <div class="city" id="rio-branco">
+                <span>
+                    <h2>Rio Branco</h2>
+                    <p class="date"></p>
+                </span>
+                <div class="time"></div>
             </div>
 
             <hr/>
 
-            <div class="block">
-                <div class="city">
+            
+            <div class="city" id="brasilia">
+                <span>
                     <h2>Brasília</h2>
-                    <p class="date">10 de Abril de 2025</p>
-                </div>
-                <div class="time">19:11:15</div>
+                    <p class="date"></p>
+                </span>
+                <div class="time"></div>
             </div>
 
         </main>
