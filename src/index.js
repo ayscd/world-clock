@@ -25,18 +25,27 @@ function updateTime() {
 
 function updateCity(event) {
     const cityToTZ = {
-        "salvador": "America/Sao_Paulo",
-        "rio-branco": "America/Rio_Branco",
-        "belo-horizonte": "America/Sao_Paulo",
-        "cuiaba": "America/Cuiaba",
-        "fernando-noronha": "America/Noronha",
+        "sydney": "Australia/Sydney",
+        "moscow": "Europe/Moscow",
+        "berlin": "Europe/Berlin",
+        "vatican": "Europe/Vatican",
+        "new-york": "America/New_York",
     }
 
     let city = event.target.value;
     let cityTimeZone = cityToTZ[city];
+    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
     let cities = document.querySelector("#cities");
-    cities.innerHTML = cityTimeZone;
+    cities.innerHTML = `
+    <div class="city">
+        <span>
+            <h2>${cityName}</h2>
+            <p class="date">${cityTime.format(`MMMM Do, YYYY`)}</p>
+        </span>
+        <div class="time">${cityTime.format(`hh:mm:ss [<small>]A[</small>]`)}</div>
+    </div>
+    `;
 }
 
 updateTime();
