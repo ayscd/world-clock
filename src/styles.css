@@ -91,6 +91,26 @@ footer {
     line-height: 40px;
 }
 
+.home-button{
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    color: #726e60ff;
+    font-size: 11px;
+}
+
+.home-button:hover {
+    cursor: pointer;
+    color: #98b06fff;
+}
+
+.hidden {
+    display: none;
+}
+
 .footer-wrapper {
     margin-top: 10px;
     font-size: 11px;

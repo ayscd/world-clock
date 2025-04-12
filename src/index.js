@@ -8,19 +8,30 @@ function updateRioJaneiro() {
     rioTime.innerHTML = rioTZ.format(`hh:mm:ss [<small>]A[</small>]`);  
 }
 
-function updateSaoPaulo() {
-    let saoPaulo = document.querySelector("#sao-paulo");
-    let saoPauloDate = saoPaulo.querySelector(".date");
-    let saoPauloTime = saoPaulo.querySelector(".time");
-    let saoPauloTZ = moment().tz("America/Sao_Paulo");
+function updateParis() {
+    let paris = document.querySelector("#paris");
+    let parisDate = paris.querySelector(".date");
+    let parisTime = paris.querySelector(".time");
+    let parisTZ = moment().tz("Europe/Paris");
 
-    saoPauloDate.innerHTML = saoPauloTZ.format(`MMMM Do, YYYY`);
-    saoPauloTime.innerHTML = saoPauloTZ.format(`hh:mm:ss [<small>]A[</small>]`);
+    parisDate.innerHTML = parisTZ.format(`MMMM Do, YYYY`);
+    parisTime.innerHTML = parisTZ.format(`hh:mm:ss [<small>]A[</small>]`);
+}
+
+function updateCuracao() {
+    let curacao = document.querySelector("#curacao");
+    let curacaoDate = curacao.querySelector(".date");
+    let curacaoTime = curacao.querySelector(".time");
+    let curacaoTZ = moment().tz("America/Curacao");
+
+    curacaoDate.innerHTML = curacaoTZ.format(`MMMM Do, YYYY`);
+    curacaoTime.innerHTML = curacaoTZ.format(`hh:mm:ss [<small>]A[</small>]`);
 }
 
 function updateTime() {
     updateRioJaneiro();
-    updateSaoPaulo();
+    updateParis();
+    updateCuracao();
 }   
 
 function updateCity(event) {
@@ -41,7 +52,6 @@ function updateCity(event) {
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
     let cities = document.querySelector("#cities");
-
     cities.innerHTML = `
     <div class="city">
         <span>
@@ -49,7 +59,13 @@ function updateCity(event) {
             <p class="date">${cityTime.format(`MMMM Do, YYYY`)}</p>
         </span>
         <div class="time">${cityTime.format(`hh:mm:ss [<small>]A[</small>]`)}</div>
-    </div>`    ;
+    </div>`;
+
+    let button = document.querySelector("#refresh");
+    button.classList.remove("hidden");
+    button.addEventListener("click", function() {
+        location.reload();
+    });
 }
 
 updateTime();
