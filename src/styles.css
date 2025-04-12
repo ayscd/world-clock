@@ -65,7 +65,7 @@ footer {
 .city {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed  rgba(114, 110, 96, 0.4);
+    border-bottom: 1px dashed  rgba(114, 110, 96, 0.6);
 }
 
 .date {

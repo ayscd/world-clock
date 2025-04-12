@@ -15,6 +15,9 @@
     <!--IMPORING MOMENT TIMEZONES-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.47/moment-timezone-with-data-1970-2030.min.js"></script>
 
+     <!--IMPORTING AXIOS-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" type="text/css">
     
     <title>WORLD CLOCK 🕰️</title>
@@ -25,31 +28,33 @@
             <h1>World Clock</h1>
 
             <select name="choose-city" id="choose-city" class="choose-city">
-                <option value="">Choose a city:</option>
-                <option value="">Salvador</option>
-                <option value="">Vitória</option>
-                <option value="">Belo Horizonte</option>
-                <option value="">Florianópolis</option>
-                <option value="">Curitiba</option>
+                <option value="choose-city">Choose a city:</option>
+                <option value="salvador">Salvador</option>
+                <option value="rio-branco">Rio Branco</option>
+                <option value="belo-horizonte">Belo Horizonte</option>
+                <option value="cuiaba">Cuiabá</option>
+                <option value="fernando-noronha">Fernando de Noronha</option>
             </select>
         </header>
 
         <main>
 
-            <div class="city" id="rio-branco">
-                <span>
-                    <h2>Rio Branco</h2>
-                    <p class="date"></p>
-                </span>
-                <div class="time"></div>
-            </div>
-           
-            <div class="city" id="brasilia">
-                <span>
-                    <h2>Brasília</h2>
-                    <p class="date"></p>
-                </span>
-                <div class="time"></div>
+            <div id="cities">
+                <div class="city" id="rio-janeiro">
+                    <span>
+                        <h2>Rio de Janeiro</h2>
+                        <p class="date"></p>
+                    </span>
+                    <div class="time"></div>
+                </div>
+            
+                <div class="city" id="sao-paulo">
+                    <span>
+                        <h2>São Paulo</h2>
+                        <p class="date"></p>
+                    </span>
+                    <div class="time"></div>
+                </div>
             </div>
 
         </main>
