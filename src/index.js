@@ -1,4 +1,4 @@
- function updateRioJaneiro() {
+function updateRioJaneiro() {
     let rio = document.querySelector("#rio-janeiro");
     let rioDate = rio.querySelector(".date");
     let rioTime = rio.querySelector(".time");
@@ -10,7 +10,7 @@
 
 function updateSaoPaulo() {
     let saoPaulo = document.querySelector("#sao-paulo");
-   let saoPauloDate = saoPaulo.querySelector(".date");
+    let saoPauloDate = saoPaulo.querySelector(".date");
     let saoPauloTime = saoPaulo.querySelector(".time");
     let saoPauloTZ = moment().tz("America/Sao_Paulo");
 
@@ -21,10 +21,11 @@ function updateSaoPaulo() {
 function updateTime() {
     updateRioJaneiro();
     updateSaoPaulo();
-}
+}   
 
 function updateCity(event) {
     const cityToTZ = {
+        "current": "America/Sao_Paulo",
         "sydney": "Australia/Sydney",
         "moscow": "Europe/Moscow",
         "berlin": "Europe/Berlin",
@@ -34,9 +35,13 @@ function updateCity(event) {
 
     let city = event.target.value;
     let cityTimeZone = cityToTZ[city];
+    if (cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
     let cityTime = moment().tz(cityTimeZone);
     let cities = document.querySelector("#cities");
+
     cities.innerHTML = `
     <div class="city">
         <span>
@@ -44,8 +49,7 @@ function updateCity(event) {
             <p class="date">${cityTime.format(`MMMM Do, YYYY`)}</p>
         </span>
         <div class="time">${cityTime.format(`hh:mm:ss [<small>]A[</small>]`)}</div>
-    </div>
-    `;
+    </div>`    ;
 }
 
 updateTime();
